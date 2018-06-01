@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.StaffVO" table="StaffVO">
+
+	<id name="staffId" type="int" column="staffId">
+			<generator class="increment" />
+		</id>
+		
+	<property name="staffName">
+		<column name="StaffName"></column>
+	</property>
+	
+	
+	<property name="staffDateOfBirth">
+		<column name="StaffDateOfBirth"></column>
+	</property>
+	
+	
+	<property name="staffGender">
+		<column name="StaffGender"></column>
+	</property>
+	
+		
+	<property name="staffPosition">
+		<column name="StaffPosition"></column>
+	</property>
+	
+	
+	<property name="staffEmail">
+		<column name="StaffEmail"></column>
+	</property>
+	
+	
+	<property name="staffPhone">
+		<column name="StaffPhone"></column>
+	</property>
+	
+	
+	<property name="staffPassword">
+		<column name="StaffPassword"></column>
+	</property>
+	
+	<many-to-one name="branchVO" class="VO.BranchVO" column="branchId"></many-to-one>
+	
+</class>
+
+</hibernate-mapping>

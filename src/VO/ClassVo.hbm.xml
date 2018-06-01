@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.ClassVo" table="ClassVO">
+
+		<id name="classId" type="int" column="classId">
+			<generator class="increment" />
+		</id>
+		
+		<property type="int" name="classNumber">
+			<column name="classNumber" />
+		</property>
+		
+		<property name="classDes">
+			<column name="classDes" />
+		</property>
+		
+		<property name="classCapacity" type="int">
+			<column name="classCapacity" />
+		</property>
+		
+		<property name="classFloor" type="int">
+			<column name="classFloor" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

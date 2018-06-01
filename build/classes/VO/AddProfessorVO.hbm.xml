@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.AddProfessorVO" table="AddProfessor">
+
+	<id name="addProfessorId" type="int" column="addProfessorId">
+			<generator class="increment" />
+		</id>
+		
+	<property name="addProfessorName">
+		<column name="AddProfessorName"></column>
+	</property>
+	
+	
+	<property name="addProfessorDateOfBirth">
+		<column name="AddProfessorDateOfBirth"></column>
+	</property>
+	
+	
+	<property name="addProfessorGender">
+		<column name="AddProfessorGender"></column>
+	</property>
+	
+	
+		
+	
+	<property name="addProfessorPosition">
+		<column name="AddProfessorPosition"></column>
+	</property>
+	
+	
+	<property name="addProfessorEmail">
+		<column name="AddProfessorEmail"></column>
+	</property>
+	
+	
+	<property name="addProfessorPhone">
+		<column name="AddProfessorPhone"></column>
+	</property>
+	
+	
+	<property name="addProfessorPassword">
+		<column name="AddProfessorPassword"></column>
+	</property>
+	
+	
+	<many-to-one name="branchVO" class="VO.BranchVO" column="branchId"></many-to-one>
+	
+	
+	
+</class>
+
+</hibernate-mapping>

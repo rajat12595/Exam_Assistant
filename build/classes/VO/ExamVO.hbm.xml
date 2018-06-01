@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.ExamVO" table="ExamVO">
+
+		<id name="examId" type="int" column="examId">
+			<generator class="increment" />
+		</id>
+				
+		<property name="examTitle">
+			<column name="examTitle" />
+		</property>
+		
+				
+		<property name="examDescription">
+			<column name="examDescription" />
+		</property>
+		
+		<property name="examDate">
+			<column name="examDate" />
+		</property>
+		
+		<property name="examTimeSlot">
+			<column name="examTimeSlot" />
+		</property>
+		
+		<many-to-one name="branchVO" class="VO.BranchVO" column="branchId"></many-to-one>
+		
+		<many-to-one name="semesterVO" class="VO.SemesterVO" column="semId"></many-to-one>		
+	
+	</class>
+</hibernate-mapping>

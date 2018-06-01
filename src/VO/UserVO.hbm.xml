@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.UserVO" table="UserVO">
+
+		<id name="id" type="int" column="userId">
+			<generator class="increment" />
+		</id>
+		
+		<property  name="fname">
+			<column name="userFname" />
+		</property>
+		
+		<property  name="lname">
+			<column name="userLname" />
+		</property>
+
+		<property  name="email">
+			<column name="userEmail" />
+		</property>
+		
+		<property name="pswd" >
+			<column name="userPswd" />
+		</property>
+		
+		<property name="department" >
+			<column name="userDepartment" />
+		</property>
+	
+		<property name="dob" >
+			<column name="userDob" />
+		</property>
+		
+		<property name="position" >
+			<column name="userPosition" />
+		</property>
+		
+		<property type="long" name="phone" >
+			<column name="userPhone" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.SemesterVO" table="SemesterVO">
+
+		<id name="semId" type="int" column="semId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="SemName">
+			<column name="semName" />
+		</property>
+		
+		<property name="semDes">
+			<column name="semDes" />
+		</property>
+		
+	<many-to-one name="branchVO" class="VO.BranchVO" column="branchId"></many-to-one>
+	</class>
+</hibernate-mapping>

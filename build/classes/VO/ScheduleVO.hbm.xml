@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="VO.ScheduleVO" table="ScheduleVO">
+
+		<id name="scheduleId" type="int" column="scheduleId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="descreiption">
+			<column name="descreiption" />
+		</property>
+		
+		
+		<many-to-one name="addProfessorVO" class="VO.AddProfessorVO" column="addProfessorId"></many-to-one>
+		
+		<many-to-one name="examVO" class="VO.ExamVO" column="examId"></many-to-one>
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>
